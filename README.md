@@ -15,30 +15,32 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|groupe_name|string|null: false, foreign_key: true|
+|name|string|null: false
 
 ### Association
 - has_many :posts
 - has_many :users, through: :groups_users
+- has_many :group_users
 
 ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false, foreign_key: true| add:index;
-|email|string|null: false, foreign_key: true|
-|passwords|string|null: false, foreign_key: true|
+|nickname|string|null: false
+|email|string|null: false
+|passwords|string|null: false
 
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :posts
+- has_many :group_users
 
 ## postsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|text|string||
+|image|string||
 |group_id|null: false, foreign_key: true|
 |user_id|null:false, foreign_key: true|
 
