@@ -1,0 +1,41 @@
+.bottom--content {
+  background-color: #ddd;
+  height: 90px;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decoration {
+  padding-left: 10px;
+  height: 50px;
+  width:calc(100vw - 555px);
+  color: #434A54;
+  font-size: 16px;
+  padding-right: 50px;
+}
+
+.btn {
+  margin-left: 25px;
+  background-color: #38AEF0;
+  height: 50px;
+  width: 100px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+}
+
+.icon--picture {
+  position: relative;
+  right: 35px;
+  top: 15px;
+}
+
+.form {
+  display: flex;
+}
+
+label {
+  width: 0px;
+}
