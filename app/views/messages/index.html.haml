@@ -1,0 +1,61 @@
+.info グループを作成しました
+.container
+  / 親要素
+  .left--content
+    / 子要素１
+    .left--content__header
+      %p sample
+      %ul
+        %li
+          =link_to root_path do
+            %i.fa.fa-edit 
+        %li
+          =link_to root_path do
+            %i.fa.fa-cog
+    .groups
+      =link_to root_path do
+        .groups--title test-group
+      .groups--name
+        さようなら
+      =link_to root_path do
+        .groups--title test-group2
+      .groups--name
+        user02
+  .main--content
+    / 子要素2
+    .main--content__header
+      .header-container
+        .header-container__title
+          test-group
+        .header-container__name
+          Menber:sample
+      =link_to root_path do
+        .edit Edit
+    .main--box
+      .post
+        .post__user
+          .post__user__name
+            test-user
+          .post__user__date
+            2019/11/01
+        .post--text
+          こんにちは！
+      .post
+        .post__user
+          .post__user__name
+            test-user
+          .post__user__date
+            2019/11/01
+        .post__text
+          こんにちは！
+    .bottom--content
+      %form.form{:action => "#"}
+        .inputbox
+        %input.decoration{:name => "text1", :type => "text", :size => "70" ,:placeholder => "type message"}/
+        %label
+          / ▽見せる部分
+          %span.icon--picture
+            = fa_icon 'image'
+          / ▽本来の選択フォームは隠す
+          %input#filesend{:name => "datafile", :type => "file"}/
+        %input.btn{:name => "submit", :type => "submit", :value => "Send" }/

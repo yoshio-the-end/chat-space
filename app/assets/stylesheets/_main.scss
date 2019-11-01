@@ -1,0 +1,92 @@
+@import "./variable";
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.info {
+  height: 24px;
+  width: 100vw;
+  background-color: $main-color;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main--content {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 24px);
+  &__header {
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
+    height: 99px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-size: 20px;
+      color: #333;
+      margin-top: 35px;
+    }
+    &__name {
+      font-size: 12px;
+      color: #999;
+      margin-top: 15px;
+    }
+  }
+  .edit {
+    margin-top: 28px;
+    height: 40px;
+    padding: 0 20px;
+    color: $main-color;
+    border:1px solid $main-color;
+    text-align: center;
+    line-height: 40px;
+    a{
+      color: $main-color;
+      text-decoration: none;
+    }
+  }
+  .main--box {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    .post {
+      margin: 46px 0 40px 40px ;
+      display: flex;
+      flex-direction: column;
+      &__user {
+        display: flex;
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          color: $text-color;
+        }
+        &__date {
+          font-size: 12px;
+          color: #999;
+          margin-left: 10px;
+        }
+      }
+      &__text {
+        margin-top: 10px;
+        color: $text-color
+      }
+    }
+  }
+}
+
+
+#filesend {
+  display: none;  /* 本来のファイル選択フォームは非表示に */
+}
