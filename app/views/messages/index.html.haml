@@ -3,54 +3,50 @@
   / 親要素
   .left--content
     / 子要素１
-    .left__header
+    .left--content__header
       %p sample
       %ul
         %li
-          %a{:href => "#"}
+          =link_to root_path do
             %i.fa.fa-edit 
         %li
-          %a{:href => "#"}
+          =link_to root_path do
             %i.fa.fa-cog
     .groups
-      .groups--title
-        %a{:href => "#"}test-group
+      =link_to root_path do
+        .groups--title test-group
       .groups--name
         さようなら
-      .groups--title
-        %a{:href => "#"}Test Group2
+      =link_to root_path do
+        .groups--title test-group2
       .groups--name
         user02
-      .groups--title
-        %a{:href => "#"}Test Group3
-      .groups--name
-        user03
   .main--content
     / 子要素2
-    .main__header
-      .header--container
-        .main--title
+    .main--content__header
+      .header-container
+        .header-container__title
           test-group
-        .main--name
+        .header-container__name
           Menber:sample
-      .edit
-        %a{:href => "#"}Edit
+      =link_to root_path do
+        .edit Edit
     .main--box
-      .post--box
-        .user--box
-          .user--name
+      .post
+        .post__user
+          .post__user__name
             test-user
-          .post--date
+          .post__user__date
             2019/11/01
         .post--text
           こんにちは！
-      .post--box
-        .user--box
-          .user--name
+      .post
+        .post__user
+          .post__user__name
             test-user
-          .post--date
+          .post__user__date
             2019/11/01
-        .post--text
+        .post__text
           こんにちは！
     .bottom--content
       %form.form{:action => "#"}

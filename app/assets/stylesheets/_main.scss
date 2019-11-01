@@ -1,5 +1,4 @@
-$text-color : #434A54;
-$main-color : #38AEF0;
+@import "./variable";
 
 a {
   text-decoration: none;
@@ -25,21 +24,22 @@ a {
   flex-direction: column;
   width: calc(100vw - 300px);
   height: calc(100vh - 24px);
-  .main__header {
+  &__header {
     padding: 0 40px;
     border-bottom: 1px solid #eee;
     height: 99px;
     display: flex;
     justify-content: space-between;
   }
-  .header--container {
+  .header-container {
     display: flex;
-    flex-direction: column;.main--title {
+    flex-direction: column;
+    &__title {
       font-size: 20px;
       color: #333;
       margin-top: 35px;
     }
-    .main--name {
+    &__name {
       font-size: 12px;
       color: #999;
       margin-top: 15px;
@@ -61,24 +61,24 @@ a {
   .main--box {
     height: calc(100vh - 190px);
     background-color: #fafafa;
-    .post--box {
+    .post {
       margin: 46px 0 40px 40px ;
       display: flex;
       flex-direction: column;
-      .user--box {
+      &__user {
         display: flex;
-        .user--name {
+        &__name {
           font-size: 16px;
           font-weight: bold;
           color: $text-color;
         }
-        .post--date {
+        &__date {
           font-size: 12px;
           color: #999;
           margin-left: 10px;
         }
       }
-      .post--text {
+      &__text {
         margin-top: 10px;
         color: $text-color
       }

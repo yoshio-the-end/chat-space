@@ -1,12 +1,12 @@
+@import "./variable";
+
 .left--content{
-  height: 100%;
   width: 300px;
   display: flex;
   flex-direction: column;
   color: #fff;
   font-weight: bold;
-  height: 100%;
-  .left__header {
+  &__header {
     height: 100px;
     width: 260px;
     background-color: #253141;
@@ -31,10 +31,10 @@ ul {
   background-color: #2f3e51;
   width: 100%;
   height: calc(100vh - 164px);
-  .groups--title {
+  &--title {
     font-size: 15px;
   }
-  .groups--name {
+  &--name {
     padding-top: 5px;
     font-size: 11px;
     margin-bottom: 40px;
