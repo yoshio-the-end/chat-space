@@ -4,12 +4,12 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: $white;
   font-weight: bold;
   &__header {
     height: 100px;
     width: 260px;
-    background-color: #253141;
+    background-color: $side_blue_dark;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -21,16 +21,16 @@
 ul {
   display: flex;
   li a {
-    color: #fff;
+    color: $white;
     text-decoration: none;
   }
 }
 
 .groups {
   padding: 20px;
-  background-color: #2f3e51;
+  background-color: $side_blue_light;
   width: 100%;
-  height: calc(100vh - 164px);
+  height: calc(100vh - 140px);
   &--title {
     font-size: 15px;
   }
