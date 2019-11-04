@@ -7,36 +7,21 @@
     .main--content__header
       .header-container
         .header-container__title
-          test-group
+          = @group.name
         .header-container__name
-          Menber:sample
+          Menber:
+          =current_user.name
       =link_to edit_group_path(@group) do
         .edit Edit
-    .main--box
-      .post
-        .post__user
-          .post__user__name
-            test-user
-          .post__user__date
-            2019/11/01
-        .post--text
-          こんにちは！
-      .post
-        .post__user
-          .post__user__name
-            test-user
-          .post__user__date
-            2019/11/01
-        .post__text
-          こんにちは！
-    .bottom--content
-      %form.form{:action => "#"}
-        .inputbox
-        %input.decoration{:name => "text1", :type => "text", :size => "70" ,:placeholder => "type message"}/
-        %label
-          / ▽見せる部分
-          %span.icon--picture
-            = fa_icon 'image'
-          / ▽本来の選択フォームは隠す
-          %input#filesend{:name => "datafile", :type => "file"}/
-        %input.submit-btn{:name => "submit", :type => "submit", :value => "Send" }/
+        
+    .messages
+      =render @messages
+    .bottom_content
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: '  type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'
