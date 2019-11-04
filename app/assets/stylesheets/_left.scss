@@ -29,14 +29,13 @@ ul {
 .groups {
   padding: 20px;
   background-color: $side_blue_light;
-  width: 100%;
   height: calc(100vh - 140px);
-  &--title {
+  &__name {
     font-size: 15px;
   }
-  &--name {
+  &__message {
     padding-top: 5px;
-    font-size: 11px;
+    font-size:11px;
     margin-bottom: 40px;
   }
 }

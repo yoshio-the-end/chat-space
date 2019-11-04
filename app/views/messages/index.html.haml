@@ -1,25 +1,7 @@
 .container
   / 親要素
-  .left--content
-    / 子要素１
-    .left--content__header
-      %p sample
-      %ul
-        %li
-          =link_to root_path do
-            %i.fa.fa-edit 
-        %li
-          =link_to root_path do
-            %i.fa.fa-cog
-    .groups
-      =link_to root_path do
-        .groups--title test-group
-      .groups--name
-        さようなら
-      =link_to root_path do
-        .groups--title test-group2
-      .groups--name
-        user02
+  = render "layouts/side_bar"
+
   .main--content
     / 子要素2
     .main--content__header
@@ -28,7 +10,7 @@
           test-group
         .header-container__name
           Menber:sample
-      =link_to root_path do
+      =link_to edit_group_path(@group) do
         .edit Edit
     .main--box
       .post
