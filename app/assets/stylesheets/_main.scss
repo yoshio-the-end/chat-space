@@ -100,7 +100,8 @@ a {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100vw - 555px);
+      padding-left:5px;
+      width: calc(100vw - 560px);
     }
     &__mask {
       background-color: $white;
