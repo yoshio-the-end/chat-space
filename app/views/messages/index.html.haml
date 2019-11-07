@@ -9,7 +9,8 @@
           = @group.name
         .header-container__name
           Menber:
-          =current_user.name
+          - @group.users.each do |user|
+            =user.name
       =link_to edit_group_path(@group) do
         .edit Edit
         
