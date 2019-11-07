@@ -30,6 +30,7 @@ ul {
   padding: 20px;
   background-color: $side_blue_light;
   height: calc(100vh - 140px);
+  overflow: auto;
   &__name {
     font-size: 15px;
   }
