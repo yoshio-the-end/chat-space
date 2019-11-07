@@ -39,7 +39,6 @@ li {
     text-align: center;
   }
   &__label {
-    display: block;
     line-height: 50px;
     font-weight: bold;
     text-align: right;
@@ -84,11 +83,7 @@ li {
   line-height: 50px;
   font-size: 14px;
   border-bottom: 1px solid #ddd;
-  &:after {
-    content: "";
-    clear: both;
-    display: block;
-  }
+
   &__name {
     float: left;
   }
